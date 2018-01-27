@@ -16,4 +16,15 @@ public class No0525 {
 			e.printStackTrace();
 		}
 	}
+
+	static void another(BufferedReader br) throws IOException {
+		String[] input = br.readLine().split(":");
+		int hour = Integer.parseInt(input[0]);
+		int minute = Integer.parseInt(input[1]);
+
+		minute += 5;
+		hour = (minute > 59) ? hour + 1 : hour;
+
+		System.out.println(String.format("%02d:%02d", hour % 24, minute % 60));
+	}
 }
