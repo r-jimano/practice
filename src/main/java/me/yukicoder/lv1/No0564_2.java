@@ -1,26 +1,24 @@
-package me.yukicoder.wip;
+package me.yukicoder.lv1;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class No0564_2 {
 	public static void main(String[] args) {
 		try (Scanner sc = new Scanner(System.in)) {
-			int h = sc.nextInt();
+			int height = sc.nextInt();
 			int num = sc.nextInt();
 			int cnt = 1;
-			List<Integer> l = new ArrayList<>();
-			l.add(h);
+			int[] h = new int[num];
+			h[0] = height;
 
 			for (int i = 1; i < num; i++) {
-				l.add(sc.nextInt());
+				h[i] = sc.nextInt();
 			}
-			Collections.sort(l);
-			Collections.reverse(l);
-			for (int i : l) {
-				if (i == h)
+			Arrays.sort(h);
+
+			for (int i = h.length - 1; i > 0; i--) {
+				if (h[i] == height)
 					break;
 				cnt++;
 			}
