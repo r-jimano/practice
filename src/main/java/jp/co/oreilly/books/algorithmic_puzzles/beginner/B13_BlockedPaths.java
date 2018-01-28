@@ -9,7 +9,7 @@ import java.io.InputStreamReader;
  * <br>
  * ただし、通行止めの区域は通ってはならない。
  */
-public class BlockedPaths extends jp.co.oreilly.books.algorithmic_puzzles.tutorial.ShortestPathCounting{
+public class B13_BlockedPaths extends jp.co.oreilly.books.algorithmic_puzzles.tutorial.ShortestPathCounting{
 	public static void main(String[] args) {
 		try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
 			String[] str = br.readLine().split(" ");
@@ -19,7 +19,7 @@ public class BlockedPaths extends jp.co.oreilly.books.algorithmic_puzzles.tutori
 			str = br.readLine().split(" ");
 			int[] closed = { Integer.parseInt(str[0]), Integer.parseInt(str[1]) };// 通行止めで通れない交差点
 
-			System.out.println(new BlockedPaths().solveDynamic(i, j, closed));
+			System.out.println(new B13_BlockedPaths().solveDynamic(i, j, closed));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
