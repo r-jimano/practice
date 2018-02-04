@@ -10,19 +10,23 @@ public class No0045 {
 			int cntDish = Integer.parseInt(br.readLine());
 			String[] str = br.readLine().split(" ");
 			int[] v = new int[cntDish];
-			int max = 0;
+			int[] max = new int[cntDish];
 
-			for (int i = 0; i< cntDish;i++) {
+			for (int i = 0; i < cntDish; i++) {
 				v[i] = Integer.parseInt(str[i]);
-				max = Math.max(max, v[i]);
-						
 			}
-			
-			System.out.println();
 
+			max[0] = v[0];
+			if (max.length > 1) {
+				max[1] = Math.max(v[0], v[1]);
+				for (int i = 2; i < cntDish; i++) {
+					// i個までの最大値を都度調べる
+					max[i] = Math.max(max[i - 1], max[i - 2] + v[i]);
+				}
+			}
+			System.out.println(max[cntDish - 1]);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
-
 }
