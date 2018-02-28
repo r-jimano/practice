@@ -1,4 +1,4 @@
-package jp.paiza.hatsukoi;
+package jp.paiza.poh.hatsukoi.challenges;
 
 import java.util.*;
 

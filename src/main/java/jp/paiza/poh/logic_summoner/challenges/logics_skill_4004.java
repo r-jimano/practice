@@ -1,4 +1,4 @@
-package jp.paiza.logic_summoner.challenges;
+package jp.paiza.poh.logic_summoner.challenges;
 
 import java.util.*;
 import java.util.Map.Entry;

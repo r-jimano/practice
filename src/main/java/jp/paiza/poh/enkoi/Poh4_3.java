@@ -1,4 +1,4 @@
-package jp.paiza.poh4enkoi;
+package jp.paiza.poh.enkoi;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

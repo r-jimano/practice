@@ -1,4 +1,4 @@
-package jp.paiza.moshijo;
+package jp.paiza.poh.moshijo.challenges;
 
 import java.util.*;
 
