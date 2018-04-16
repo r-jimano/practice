@@ -3,13 +3,14 @@ package jp.co.oreilly.books.algorithmic_puzzles.beginner;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import jp.co.oreilly.books.algorithmic_puzzles.tutorial.*;
 
 /**
  * ある都市の交差点A（0,0）からB(i,j)への最短経路の数を数えよ。この都市の道は碁盤の目状になっているとする。
  * <br>
  * ただし、通行止めの区域は通ってはならない。
  */
-public class B13_BlockedPaths extends jp.co.oreilly.books.algorithmic_puzzles.tutorial.ShortestPathCounting{
+public class B13_BlockedPaths extends ShortestPathCounting{
 	public static void main(String[] args) {
 		try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
 			String[] str = br.readLine().split(" ");
