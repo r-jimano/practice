@@ -5,16 +5,17 @@ import java.math.RoundingMode;
 import java.util.*;
 
 public class moshijo_character_9 {
-	public static void main(String args[]) throws Exception {
-		Scanner sc = new Scanner(System.in);
-		int input = sc.nextInt();
-		BigDecimal num = new BigDecimal(input);
-		int cnt = num.precision();
+    @SuppressWarnings("resource")
+    public static void main(String args[]) throws Exception {
+	Scanner sc = new Scanner(System.in);
+	int input = sc.nextInt();
+	BigDecimal num = new BigDecimal(input);
+	int cnt = num.precision();
 
-		for (int i = 0; i < cnt + 1; i++) {
-			BigDecimal tmp = num.setScale(-1 * i, RoundingMode.HALF_UP);
-			num = num.compareTo(tmp) < 0 ? tmp : num;
-		}
-		System.out.println(num.intValue());
+	for (int i = 0; i < cnt + 1; i++) {
+	    BigDecimal tmp = num.setScale(-1 * i, RoundingMode.HALF_UP);
+	    num = num.compareTo(tmp) < 0 ? tmp : num;
 	}
+	System.out.println(num.intValue());
+    }
 }
