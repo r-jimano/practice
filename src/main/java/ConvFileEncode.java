@@ -1,11 +1,11 @@
 import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.file.FileVisitOption;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
@@ -42,20 +42,21 @@ public class ConvFileEncode {
      * @return
      * @throws IOException
      */
-    static Path _convToUTF8(Path txt, String oldCharset) {
+    static void _convToUTF8(Path txt, String oldCharset) {
 	// Files.readAllLinesでCharset.forName()を利用してデコード文字セットを指定すると怒られた・・・
-	try (FileInputStream input = new FileInputStream(txt.toFile());
-		BufferedReader br = new BufferedReader(new InputStreamReader(input, oldCharset))) {
+	try (BufferedReader br = new BufferedReader(
+		new InputStreamReader(Files.newInputStream(txt), oldCharset))) {
 	    List<String> lines = new ArrayList<>();
 	    String line = null;
 	    while ((line = br.readLine()) != null) {
 		lines.add(line);
 	    }
-	    // TODO 消してしまう前にファイルを退避
+	    Path tmpPath = Files.createTempFile(txt.getParent(), txt.getFileName().toString(), null);
+	    Files.copy(txt, tmpPath, StandardCopyOption.REPLACE_EXISTING);
 	    Files.write(txt, lines, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING);
+	    Files.deleteIfExists(tmpPath);
 	} catch (IOException e) {
 	    e.printStackTrace();
 	}
-	return txt;
     }
 }
