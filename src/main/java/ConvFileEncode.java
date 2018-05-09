@@ -1,12 +1,5 @@
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.nio.file.FileVisitOption;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardCopyOption;
-import java.nio.file.StandardOpenOption;
+import java.io.*;
+import java.nio.file.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,8 +23,12 @@ public class ConvFileEncode {
 	 * @throws IOException
 	 */
 	static void convToUTF8(Path dir, String oldCharset) throws IOException {
-		Files.walk(dir, FileVisitOption.FOLLOW_LINKS).filter(path -> path.toFile().isFile())
-				.forEach(path -> _convToUTF8(path, oldCharset));
+		Files.walk(dir, FileVisitOption.FOLLOW_LINKS)
+				.filter(path -> {
+					File f = path.toFile();
+					return f.isFile() && path.toFile().toString().endsWith(".txt");
+				})
+				.forEach(txtFile -> _convToUTF8(txtFile, oldCharset));
 	}
 
 	/**
