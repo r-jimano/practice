@@ -23,12 +23,10 @@ public class ConvFileEncode {
 	 * @throws IOException
 	 */
 	static void convToUTF8(Path dir, String oldCharset) throws IOException {
-		Files.walk(dir, FileVisitOption.FOLLOW_LINKS)
-				.filter(path -> {
-					File f = path.toFile();
-					return f.isFile() && path.toFile().toString().endsWith(".txt");
-				})
-				.forEach(txtFile -> _convToUTF8(txtFile, oldCharset));
+		Files.walk(dir, FileVisitOption.FOLLOW_LINKS).filter(path -> {
+			File f = path.toFile();
+			return f.isFile() && path.toFile().toString().endsWith(".txt");
+		}).forEach(txtFile -> _convToUTF8(txtFile, oldCharset));
 	}
 
 	/**
