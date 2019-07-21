@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ConvFileEncode {
+	
+	// TODO 
+//	private static String regex = "glob:*.{java,txt,log,csv}";
+//	PathMatcher matcher = FileSystems.getDefault().getPathMatcher(regex);
 	public static void main(String[] args) {
 		try (BufferedReader br = new BufferedReader(new InputStreamReader(System.in))) {
 			System.out.println("Dir : ");
@@ -23,9 +27,11 @@ public class ConvFileEncode {
 	 * @throws IOException
 	 */
 	static void convToUTF8(Path dir, String oldCharset) throws IOException {
+		// TODO 拡張子でフィルタするところが残念
+		// walkFileTree(Path, FileVisitor)を使う
 		Files.walk(dir, FileVisitOption.FOLLOW_LINKS).filter(path -> {
 			File f = path.toFile();
-			return f.isFile() && path.toFile().toString().endsWith(".txt");
+			return f.isFile() && (f.toString().endsWith(".java") || f.toString().endsWith(".txt") || f.toString().endsWith(".csv"));
 		}).forEach(txtFile -> _convToUTF8(txtFile, oldCharset));
 	}
 
