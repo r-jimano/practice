@@ -9,7 +9,7 @@ class HashSearcherExampleTest {
 	HashSearcherExample searcher;
 
 	@BeforeEach
-	void beforeTest() {
+	void setUp() {
 		searcher = new HashSearcherExample();
 	}
 

@@ -11,7 +11,7 @@ class SearcherExampleTest {
 	SearcherExample searcher;
 
 	@BeforeEach
-	void beforeTest() {
+	void setUp() {
 		searcher = new SearcherExample();
 	}
 
