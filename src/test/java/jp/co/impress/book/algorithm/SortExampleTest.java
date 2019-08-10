@@ -52,7 +52,13 @@ class SortExampleTest {
 
 	@Test
 	void testQuickSort() {
-		fail("まだ実装されていません");
+		int[] actual = { 5, 4, 7, 6, 8, 3, 1, 2, 9 };
+		int[] expected = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+		sorter.quickSort(actual);
+
+		for (int i = 0; i < actual.length; i++) {
+			assertEquals(actual[i], expected[i]);
+		}
 	}
 
 }

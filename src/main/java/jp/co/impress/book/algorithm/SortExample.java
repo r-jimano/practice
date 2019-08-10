@@ -47,6 +47,44 @@ public class SortExample {
 	}
 
 	void quickSort(int[] arr) {
+		quickSort(arr, 0, arr.length - 1);
+	}
+
+	private void quickSort(int[] arr, int left, int right) {
+		int i = left + 1;
+		int k = right;
+
+		// TODO とりあえずソート対象の始めの要素を先頭にした
+		// arr[leftIdx]を基準値として、
+		while (i < k) {
+			// 基準値より小さいもの左から、
+			while (arr[i] < arr[left] && i < right) {
+				i++;
+			}
+			// 大きいものを右から探す
+			while (arr[k] >= arr[left] && k > left) {
+				k--;
+			}
+			if (i < k) {
+				int tmp = arr[i];
+				arr[i] = arr[k];
+				arr[k] = tmp;
+			}
+		}
+		// 基準値を真ん中に持ってくる
+		int tmp = arr[left];
+		arr[left] = arr[k];
+		arr[k] = tmp;
+
+		// ここまでで、基準値を境に大きい集合と小さい集合に分けられている。
+		// これらの部分集合に対して再帰的に処理する。
+		if (left < k - 1) {
+			quickSort(arr, left, k - 1);
+		}
+		if (k + 1 < right) {
+			quickSort(arr, k + 1, right);
+		}
 
 	}
+
 }
