@@ -1,4 +1,4 @@
-package jp.co.impress.book.algorithm.search;
+package jp.co.impress.book.algorithm;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -6,6 +6,8 @@ import java.util.Arrays;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import jp.co.impress.book.algorithm.SortExample;
 
 class SortExampleTest {
 	SortExample sorter;

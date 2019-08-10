@@ -1,4 +1,4 @@
-package jp.co.impress.book.algorithm.search;
+package jp.co.impress.book.algorithm;
 
 public class SearcherExample {
 

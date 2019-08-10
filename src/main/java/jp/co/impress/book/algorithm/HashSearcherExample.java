@@ -1,4 +1,4 @@
-package jp.co.impress.book.algorithm.search;
+package jp.co.impress.book.algorithm;
 
 /**
  * ハッシュ探索法の簡単な実装例です。
