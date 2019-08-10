@@ -32,7 +32,18 @@ public class SortExample {
 	}
 
 	void insertionSort(int[] arr) {
+		// 最初の要素は固定、ここを基準にしてそれ以降の要素を入れ替える
+		for (int i = 1; i < arr.length; i++) {
+			int tmp = arr[i];// 入れ替える要素を避けておいて
+			int k = i;
 
+			// 挿入する場所を探しつつ、要素を大きいほうに詰める
+			while (k > 0 && arr[k - 1] > tmp) {
+				arr[k] = arr[k - 1];
+				k--;
+			}
+			arr[k] = tmp;
+		}
 	}
 
 	void quickSort(int[] arr) {

@@ -39,7 +39,13 @@ class SortExampleTest {
 
 	@Test
 	void testInsertionSort() {
-		fail("まだ実装されていません");
+		int[] actual = { 12, 13, 11, 14, 10 };
+		int[] expected = { 10, 11, 12, 13, 14 };
+		sorter.insertionSort(actual);
+
+		for (int i = 0; i < actual.length; i++) {
+			assertEquals(actual[i], expected[i]);
+		}
 	}
 
 	@Test
