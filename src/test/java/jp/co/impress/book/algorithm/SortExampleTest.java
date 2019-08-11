@@ -2,8 +2,6 @@ package jp.co.impress.book.algorithm;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.util.Arrays;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -23,9 +21,7 @@ class SortExampleTest {
 		int[] expected = { 10, 11, 12, 13, 14 };
 		sorter.selectionSort(actual);
 
-		for (int i = 0; i < actual.length; i++) {
-			assertEquals(actual[i], expected[i]);
-		}
+		assertArrayEquals(expected, actual);
 	}
 
 	@Test
@@ -34,9 +30,7 @@ class SortExampleTest {
 		int[] expected = { 10, 11, 12, 13, 14 };
 		sorter.bubbleSort(actual);
 
-		for (int i = 0; i < actual.length; i++) {
-			assertEquals(actual[i], expected[i]);
-		}
+		assertArrayEquals(expected, actual);
 	}
 
 	@Test
@@ -45,9 +39,7 @@ class SortExampleTest {
 		int[] expected = { 10, 11, 12, 13, 14 };
 		sorter.insertionSort(actual);
 
-		for (int i = 0; i < actual.length; i++) {
-			assertEquals(actual[i], expected[i]);
-		}
+		assertArrayEquals(expected, actual);
 	}
 
 	@Test
@@ -56,9 +48,7 @@ class SortExampleTest {
 		int[] expected = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 		sorter.quickSort(actual);
 
-		for (int i = 0; i < actual.length; i++) {
-			assertEquals(actual[i], expected[i]);
-		}
+		assertArrayEquals(expected, actual);
 	}
 
 }
