@@ -1,15 +1,17 @@
-package jp.co.impress.book.algorithm.search;
+package jp.co.impress.book.algorithm;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import jp.co.impress.book.algorithm.HashSearcherExample;
+
 class HashSearcherExampleTest {
 	HashSearcherExample searcher;
 
 	@BeforeEach
-	void beforeTest() {
+	void setUp() {
 		searcher = new HashSearcherExample();
 	}
 

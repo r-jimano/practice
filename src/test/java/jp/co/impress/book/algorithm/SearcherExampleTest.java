@@ -1,4 +1,4 @@
-package jp.co.impress.book.algorithm.search;
+package jp.co.impress.book.algorithm;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -7,11 +7,13 @@ import java.util.Arrays;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import jp.co.impress.book.algorithm.SearcherExample;
+
 class SearcherExampleTest {
 	SearcherExample searcher;
 
 	@BeforeEach
-	void beforeTest() {
+	void setUp() {
 		searcher = new SearcherExample();
 	}
 
