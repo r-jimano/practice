@@ -3,6 +3,7 @@ package com.codewars.kata._7kyu;
 public class Kata {
 
 	public static String HighAndLow(String numbers) {
+		@SuppressWarnings("resource")
 		java.util.Scanner sc = new java.util.Scanner(numbers);
 	    int max = Integer.MIN_VALUE;
 	    int min = Integer.MAX_VALUE;

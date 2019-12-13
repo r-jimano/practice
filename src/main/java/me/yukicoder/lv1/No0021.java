@@ -19,7 +19,7 @@ public class No0021 {
 		try (BufferedReader br = 
 				new BufferedReader(new InputStreamReader(System.in))) {
 	        int N = Integer.parseInt(br.readLine());
-	        int K = Integer.parseInt(br.readLine());
+	        //int K = Integer.parseInt(br.readLine());
 	        int[] n = new int[N];
 	        
 	        for (int i = 0; i < N ; i++) {
