@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class No207 {
 	public static void main(String[] args) {
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		final long a = sc.nextLong();
 		final long b = sc.nextLong();

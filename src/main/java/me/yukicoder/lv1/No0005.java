@@ -10,6 +10,7 @@ import java.util.Scanner;
  */
 public class No0005 {
 	public static void main(String[] args) {
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		int length = sc.nextInt();
 		int cntBlk = sc.nextInt();

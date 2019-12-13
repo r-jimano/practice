@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class No0191 {
 	final static int DEPOSIT = 30;
 	public static void main(String[] args) {
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		int N = sc.nextInt();
 		int[] C = new int[N];

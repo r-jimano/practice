@@ -16,6 +16,7 @@ import java.util.Scanner;
  */
 public class No0227 {
 	public static void main(String[] args) {
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		Map<String, Integer> cards = new HashMap<>();
 

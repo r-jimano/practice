@@ -9,7 +9,7 @@ public class No0175 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int l = Integer.parseInt(br.readLine());
 		int n = Integer.parseInt(br.readLine());
-		String[] str = br.readLine().split(" ");
+		// String[] str = br.readLine().split(" ");
 		
 		System.out.println((int)Math.pow(2.0, l - 3) * n);
 	}

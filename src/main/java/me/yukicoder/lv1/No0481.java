@@ -13,6 +13,7 @@ import java.util.Scanner;
 
 public class No0481 {
 	public static void main(String[] args) {
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		int sum = 10 * (10 + 1) / 2;// 1から10までの合計
 		int num = sc.nextInt();// 書いた数9個の合計

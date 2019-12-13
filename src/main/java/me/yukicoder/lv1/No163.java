@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class No163 {
 	public static void main(String[] args) {
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		char[] pass = sc.next().toCharArray();
 		StringBuffer sb = new StringBuffer();

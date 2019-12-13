@@ -2,7 +2,6 @@ package me.yukicoder.lv1;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
 public class No0079 {
 	public static void main(String[] args) {

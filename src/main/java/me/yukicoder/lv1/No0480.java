@@ -1,7 +1,6 @@
 package me.yukicoder.lv1;
 
 import java.util.Scanner;
-import java.util.stream.IntStream;
 
 /**
  * 1からNまでの合計を求めてください。
@@ -12,6 +11,7 @@ import java.util.stream.IntStream;
 
 public class No0480 {
 	public static void main(String[] args) {
+		@SuppressWarnings("resource")
 		int n = new Scanner(System.in).nextInt();
         int sum = n * (n + 1) / 2;
 		System.out.println(sum);

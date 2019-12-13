@@ -10,6 +10,7 @@ import java.util.Scanner;
 public class No0264 {
 	
 	public static void main(String[] args) {
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		byte N = sc.nextByte();
 		byte K = sc.nextByte();

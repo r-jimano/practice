@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class No239 {
 	public static void main(String[] args) {
+		@SuppressWarnings("resource")
 		Scanner sc = new Scanner(System.in);
 		int k = sc.nextInt();
 		int n = sc.nextInt();

@@ -2,7 +2,6 @@ package me.yukicoder.lv1;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
 /**
  * コピーに時間がかかるので、しばらくして確認すると「K%完了しました。あとS分かかります。」

@@ -2,9 +2,6 @@ package me.yukicoder.lv1;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * kamipeipaa君は木が大好きですが，今日は文字列で遊んでいます。

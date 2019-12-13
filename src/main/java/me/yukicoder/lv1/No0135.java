@@ -12,7 +12,7 @@ public class No0135 {
 			String[] str = br.readLine().split(" ");
 			int[] x = new int[N];
 			int min = 0;// Integer.MAX_VALUEとかにして状態を持つようにしてやるとよい？
-			int tmp = 0;
+			//int tmp = 0;
 			boolean boo = false;
 
 			for (int i = 0; i < N; i++) {
