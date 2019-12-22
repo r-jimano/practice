@@ -23,10 +23,10 @@ public class SearcherExample {
 			} else {
 				// 検索範囲を中央の前or後ろに絞り込んで、 以下繰り返し
 				if (arr[center] > target) {
-					begin = center + 1;
-				} else {
-					end = center - 1;
-				}
+					end = center;// 前を探す
+				  } else {
+					begin = center + 1;// 後ろを探す
+				  }
 			}
 		}
 		return -1;
