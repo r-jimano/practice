@@ -7,7 +7,7 @@ import java.util.Arrays;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import jp.co.impress.book.algorithm.SearcherExample;
+//import jp.co.impress.book.algorithm.SearcherExample;
 
 class SearcherExampleTest {
 	SearcherExample searcher;

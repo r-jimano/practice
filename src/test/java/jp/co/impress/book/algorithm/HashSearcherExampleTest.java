@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import jp.co.impress.book.algorithm.HashSearcherExample;
+//import jp.co.impress.book.algorithm.HashSearcherExample;
 
 class HashSearcherExampleTest {
 	HashSearcherExample searcher;
