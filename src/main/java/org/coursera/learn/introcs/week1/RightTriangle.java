@@ -1,4 +1,4 @@
-package org.coursera.learn.introcs;
+package org.coursera.learn.introcs.week1;
 
 public class RightTriangle {
     public static void main(String[] args) {

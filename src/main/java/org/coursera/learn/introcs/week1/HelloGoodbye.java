@@ -1,4 +1,4 @@
-package org.coursera.learn.introcs;
+package org.coursera.learn.introcs.week1;
 
 public class HelloGoodbye {
     public static void main(String[] args) {
