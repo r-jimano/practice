@@ -23,5 +23,6 @@ hs_err_pid*
 .gradle
 .classpath
 .project
+.vscode/launch.json
 bin/
 *.prefs
