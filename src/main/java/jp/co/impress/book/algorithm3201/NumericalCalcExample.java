@@ -1,4 +1,4 @@
-package jp.co.impress.book.algorithm;
+package jp.co.impress.book.algorithm3201;
 
 import java.util.ArrayList;
 import java.util.List;

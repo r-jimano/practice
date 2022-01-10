@@ -1,11 +1,11 @@
-package jp.co.impress.book.algorithm;
+package jp.co.impress.book.algorithm3201;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import jp.co.impress.book.algorithm.SortExample;
+import jp.co.impress.book.algorithm3201.SortExample;
 
 class SortExampleTest {
 	SortExample sorter;

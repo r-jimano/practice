@@ -1,4 +1,4 @@
-package jp.co.impress.book.algorithm;
+package jp.co.impress.book.algorithm3201;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -7,6 +7,8 @@ import java.util.List;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import jp.co.impress.book.algorithm3201.NumericalCalcExample;
 
 class NumericalCalcExampleTest {
 	NumericalCalcExample calc;
